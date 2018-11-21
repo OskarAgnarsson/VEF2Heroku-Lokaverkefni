@@ -5,6 +5,14 @@ from bottle import *
 @route('/')
 def index():
     return template('index')
+
+@route('/innskra')
+def innskra():
+    return template('innskra')
+
+@route('/nyskra')
+def nyskra():
+    return template('nyskra')
     
 ##########################################
 @error(404)

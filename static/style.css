@@ -8,12 +8,12 @@ body {
 	margin: 0 auto;
 }
 
-header h1 {
-	text-align: center;
-	font-size: 2em;
-	padding: .7em;
+header{
+	display: grid;
+	grid-template-columns: 3fr 1fr;
 	border-bottom: solid black 0.1em;
 }
+
 
 .main {
 	display: grid;
@@ -30,18 +30,54 @@ header h1 {
 	grid-template-columns: 1fr 1fr;
 }
 
-.adalFrett{
+.sidebar{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.siteTitle{
+	text-align: center;
+	font-size: 1.2em;
+	background-color: purple;
+}
+
+.skra{
+	padding: .5em;
+	background-color: cyan;
+}
+
+.skra li{
+	text-decoration: none;
+	list-style-type: none;
+	padding: .3em;
+}
+
+.skra a{
+	text-decoration: none;
+}
+
+.adalFrett {
+	align-items: center;
+	text-align: center;
 	background-color: blue;
 }
 
 .secondary{
+	align-items: center;
+	text-align: center;
 	background-color: green;
 }
 
 .tertiary{
+	align-items: center;
+	text-align: center;
 	background-color: red;
 }
 
-.sidebar{
+.sidebar div{
+	align-items: center;
+	text-align: center;
+	border-bottom: solid black .05em;
+	border-top: solid black .05em;
 	background-color: yellow;
 }
