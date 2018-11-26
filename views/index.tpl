@@ -26,7 +26,6 @@
 				<p class="preview">
 					textPreview1<a href="/">...</a>
 				</p>
-				<textarea>Next, get a free Tiny Cloud API key!</textarea>
 			</div>
 			<div class="eftirAdal">
 				<div class="secondary">

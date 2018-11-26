@@ -11,7 +11,7 @@
 		<h1>Nýskráning</h1>
 	</header>
 	<section>
-		<form method="post" action="/doinnskra" accept-charset="ISO-8859-1">
+		<form method="post" action="/donyskra" accept-charset="ISO-8859-1">
 			<label>
 				Nafn:
 				<br>
