@@ -56,6 +56,45 @@ def ny():
     else:
         return u, " er frátekið notandanafn <br> <a href='/nyskra'>reyndu aftur</a>"
 
+@route('/postfrett', method='POST')
+def nyfrett():
+    t = request.forms.get('titill')
+    f = request.forms.get('frett')
+    h = request.forms.get('hof')
+
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
+    cur = conn.cursor()
+
+    cur.execute("SELECT Rit_ID FROM 1610013090_vef2lok.ritstjori WHERE User=%s",(h))
+    result = cur.fetchall()
+
+    rit_id=result[0][0]
+
+    cur.execute("INSERT INTO 1610013090_vef2lok.frettir(Rit_ID,Titill,Texti) VALUES (%s,%s,%s)",(rit_id,t,f))
+    conn.commit()
+    cur.close()
+    conn.close()
+    return template('ritstjori',u=h)
+
+
+@route('/breytafrett', method='POST')
+def breytafrett():
+    h = request.forms.get('hof')
+
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
+    cur = conn.cursor()
+
+
+    cur.execute("SELECT Rit_ID FROM 1610013090_vef2lok.ritstjori WHERE User=%s",(h))
+    result = cur.fetchall()
+
+
+    rit_id=result[0][0]
+
+    cur.execute("SELECT * FROM 1610013090_vef2lok.frettir WHERE Rit_ID=%s",(rit_id))
+    result = cur.fetchall()
+
+    return template('breyta',u=h,r=result)
     
 ##########################################
 @error(404)

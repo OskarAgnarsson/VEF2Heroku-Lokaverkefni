@@ -81,3 +81,35 @@ header{
 	border-top: solid black .05em;
 	background-color: yellow;
 }
+
+.top{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.topid{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border-left: solid black .01em;
+	border-right: solid black .01em;
+}
+
+.breyta{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	border-bottom: solid black .01em;
+	border-top: solid black .01em;
+	margin-top: .5em;
+}
+
+.breyta input[type=text]{
+	width: 70%;
+	margin-left: 2em;
+	margin-right: .5em;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+.breyta input[type=submit]{
+	margin-bottom: 1em;
+}
