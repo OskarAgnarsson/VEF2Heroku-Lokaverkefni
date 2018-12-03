@@ -95,6 +95,21 @@ def breytafrett():
     result = cur.fetchall()
 
     return template('breyta',u=h,r=result)
+
+@route('/breyta',method='POST')
+def breyta():
+    f = request.forms.get('f')
+    r = request.forms.get('r')
+    ti = request.forms.get('ti')
+    te = request.forms.get('te')
+    br = request.forms.get('breyta')
+
+    if br == 'Breyta':
+        conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
+        cur = conn.cursor()
+        cur.execute("UPDATE 1610013090_vef2lok.frettir SET")
+    #Unfinished
+
     
 ##########################################
 @error(404)

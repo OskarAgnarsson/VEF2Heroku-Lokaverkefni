@@ -11,7 +11,7 @@
 
 	<h2>Ný Frétt</h2>
 
-	<form method="post" action="/postfrett" accept-charset="ISO-8859-1">
+	<form method="POST" action="/postfrett" accept-charset="ISO-8859-1">
 		<label>
 			Titill:
 			<br>
@@ -31,7 +31,7 @@
 
 	<h2>Breyta Frétt</h2>
 
-	<form method="post" action="/breytafrett" accept-charset="ISO-8859-1">
+	<form method="POST" action="/breytafrett" accept-charset="ISO-8859-1">
 		<input type="radio" name="hof" value="{{u}}" required>
 		<br>
 		<input type="submit">

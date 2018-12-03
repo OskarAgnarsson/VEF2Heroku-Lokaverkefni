@@ -12,25 +12,29 @@
 		<div class="topid"><h4>Frett_ID</h4></div>
 		<div class="topid"><h4>Rit_ID</h4></div>
 		<div class="topid"><h4>Titill</h4></div>
-		<div class="topid"><h4>Texti</h4></div>
 	</header>
 	%for i in r:
-		<form class="breyta" method="post" action="/breyta">
+		<form method="post" action="/breyta">
+			<div class="breyta">
+				<label>
+					<input type="text" name="f" value="{{i[0]}}">
+				</label>
+				<label>
+					<input type="text" name="r" value="{{i[1]}}">
+				</label>
+				<label>
+					<input type="text" name="ti" value="{{i[2]}}">
+				</label>
+			</div>
+			<h4>Texti</h4>
 			<label>
-				<input type="text" value="{{i[0]}}">
-			</label>
-			<label>
-				<input type="text" value="{{i[1]}}">
-			</label>
-			<label>
-				<input type="text" value="{{i[2]}}">
-			</label>
-			<label>
-				<input type="text" value="{{i[3]}}">
+				<textarea name="te">
+					{{i[3]}}
+				</textarea>
 			</label>
 			<br>
 			<input type="submit" name="breyta" value="Breyta">
-			<input type="submit" name="breyta" value="Eyda">
+			<input type="submit" name="breyta" value="Eyða">
 		</form>
 	%end
 

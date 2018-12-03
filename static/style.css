@@ -84,7 +84,7 @@ header{
 
 .top{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .topid{
@@ -97,7 +97,7 @@ header{
 
 .breyta{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	border-bottom: solid black .01em;
 	border-top: solid black .01em;
 	margin-top: .5em;
