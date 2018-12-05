@@ -5,7 +5,21 @@ import pymysql
 
 @route('/')
 def index():
-    return template('index')
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
+    cur = conn.cursor()
+
+    cur.execute("SELECT Frett_ID,Titill,SUBSTR(Texti,1,30) FROM 1610013090_vef2lok.frettir ORDER BY Frett_ID DESC")
+    result = cur.fetchall()
+    return template('index',result=result)
+
+@route('/frett<tel>')
+def frett(tel):
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
+    cur = conn.cursor()
+
+    cur.execute("SELECT Frett_ID,Titill,Texti FROM 1610013090_vef2lok.frettir WHERE Frett_ID=%s",(tel))
+    result = cur.fetchall()
+    return template('frett',result=result,id=tel)
 
 @route('/innskra')
 def innskra():
@@ -74,7 +88,7 @@ def nyfrett():
     conn.commit()
     cur.close()
     conn.close()
-    return template('ritstjori',u=h)
+    redirect('/')
 
 
 @route('/breytafrett', method='POST')
@@ -107,8 +121,22 @@ def breyta():
     if br == 'Breyta':
         conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
         cur = conn.cursor()
-        cur.execute("UPDATE 1610013090_vef2lok.frettir SET")
-    #Unfinished
+        cur.execute("UPDATE 1610013090_vef2lok.frettir SET Rit_ID=%s WHERE Frett_ID=%s",(r,f))
+        conn.commit()
+        cur.execute("UPDATE 1610013090_vef2lok.frettir SET Titill=%s WHERE Frett_ID=%s",(ti,f))
+        conn.commit()
+        cur.execute("UPDATE 1610013090_vef2lok.frettir SET Texti=%s WHERE Frett_ID=%s",(te,f))
+        conn.commit()
+        cur.close()
+        conn.close()
+    else:
+        conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1610013090', passwd='mypassword', db='1610013090_vef2lok')
+        cur = conn.cursor()
+        cur.execute("DELETE FROM 1610013090_vef2lok.frettir WHERE Frett_ID=%s",(f))
+        conn.commit()
+        cur.close()
+        conn.close()
+    redirect('/')
 
     
 ##########################################

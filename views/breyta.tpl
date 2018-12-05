@@ -17,7 +17,8 @@
 		<form method="post" action="/breyta">
 			<div class="breyta">
 				<label>
-					<input type="text" name="f" value="{{i[0]}}">
+					{{i[0]}}
+					<input type="radio" name="f" value="{{i[0]}}" required>
 				</label>
 				<label>
 					<input type="text" name="r" value="{{i[1]}}">

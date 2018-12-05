@@ -21,23 +21,20 @@
 	<section class="main">
 		<section class="content">
 			<div class="adalFrett">
-				<img src="#">
-				<a href="/"><h1 class="frettaTitill">title1</h1></a>
+				<a href="/frett{{result[0][0]}}"><h1 class="frettaTitill">{{result[0][1]}}</h1></a>
 				<p class="preview">
 					textPreview1<a href="/">...</a>
 				</p>
 			</div>
 			<div class="eftirAdal">
 				<div class="secondary">
-					<img src="#">
-					<a href="/"><h1 class="minniTitill">title2</h1></a>
+					<a href="/frett{{result[1][0]}}"><h1 class="minniTitill">{{result[1][1]}}</h1></a>
 					<p class="preview">
 						textPreview2<a href="/">...</a>
 					</p>
 				</div>
 				<div class="tertiary">
-					<img src="#">
-					<a href="/"><h1 class="minniTitill">title3</h1></a>
+					<a href="/frett{{result[2][0]}}"><h1 class="minniTitill">{{result[2][1]}}</h1></a>
 					<p class="preview">
 						textPreview3<a href="/">...</a>
 					</p>
