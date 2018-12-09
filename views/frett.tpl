@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{result[0][1]}}}</title>
+	<title>{{result[0][1]}}</title>
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
 <body>

@@ -47,7 +47,7 @@ def inn():
     else:
         cur.close()
         conn.close()
-        return "Rangt lykilorð eða notandanafn"
+        return "Rangt lykilorð eða notandanafn <a href='/'>Heim</a>"
 
 @route('/donyskra', method='POST')
 def ny():
@@ -70,7 +70,7 @@ def ny():
     else:
         return u, " er frátekið notandanafn <br> <a href='/nyskra'>reyndu aftur</a>"
 
-@route('/postfrett', method='POST')
+@route('/nyfrett', method='POST')
 def nyfrett():
     t = request.forms.get('titill')
     f = request.forms.get('frett')

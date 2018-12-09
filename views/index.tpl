@@ -23,37 +23,33 @@
 			<div class="adalFrett">
 				<a href="/frett{{result[0][0]}}"><h1 class="frettaTitill">{{result[0][1]}}</h1></a>
 				<p class="preview">
-					textPreview1<a href="/">...</a>
+					{{!result[0][2]}}<a href="/frett{{result[2][0]}}">...</a>
 				</p>
 			</div>
 			<div class="eftirAdal">
 				<div class="secondary">
 					<a href="/frett{{result[1][0]}}"><h1 class="minniTitill">{{result[1][1]}}</h1></a>
 					<p class="preview">
-						textPreview2<a href="/">...</a>
+						{{!result[1][2]}}<a href="/frett{{result[2][0]}}">...</a>
 					</p>
 				</div>
 				<div class="tertiary">
 					<a href="/frett{{result[2][0]}}"><h1 class="minniTitill">{{result[2][1]}}</h1></a>
 					<p class="preview">
-						textPreview3<a href="/">...</a>
+						{{!result[2][2]}}<a href="/frett{{result[2][0]}}">...</a>
 					</p>
 				</div>
 			</div>
 		</section>
 		<section class="sidebar">
+			%for i in result[3:-1]:
 			<div>
-				<h1>kool</h1>
+				<a href="/frett{{i[0]}}"><h2>{{i[1]}}</h2></a>
+				<p>
+					{{!i[2]}}<a href="/frett{{i[0]}}">...</a>
+				</p>
 			</div>
-			<div>
-				<h1>kool</h1>
-			</div>
-			<div>
-				<h1>kool</h1>
-			</div>
-			<div>
-				<h1>kool</h1>
-			</div>
+			%end
 		</section>
 	</section>
 </body>

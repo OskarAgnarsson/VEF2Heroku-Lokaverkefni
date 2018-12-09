@@ -11,7 +11,7 @@
 
 	<h2>Ný Frétt</h2>
 
-	<form method="POST" action="/postfrett" accept-charset="ISO-8859-1">
+	<form method="POST" action="/nyfrett" accept-charset="ISO-8859-1">
 		<label>
 			Titill:
 			<br>
@@ -26,12 +26,14 @@
 		{{u}}
 		<input type="radio" name="hof" value="{{u}}" required>
 		<br>
-		<input type="submit" name="submit" value="post">
+		<input type="submit" name="Submit" value="Submit">
 	</form>
 
 	<h2>Breyta Frétt</h2>
 
 	<form method="POST" action="/breytafrett" accept-charset="ISO-8859-1">
+		Höfundur:
+		{{u}}
 		<input type="radio" name="hof" value="{{u}}" required>
 		<br>
 		<input type="submit">
