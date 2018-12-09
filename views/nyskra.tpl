@@ -10,7 +10,7 @@
 	<header>
 		<h1>Nýskráning</h1>
 	</header>
-	<section>
+	<section class="innskra">
 		<form method="post" action="/donyskra" accept-charset="ISO-8859-1">
 			<label>
 				Nafn:
@@ -29,6 +29,7 @@
 				<br>
 				<input type="text" name="pass">
 			</label>
+			<br>
 			<label>
 				<input type="submit" name="innskra">
 			</label>

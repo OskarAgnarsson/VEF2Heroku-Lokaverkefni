@@ -1,1 +1,1 @@
-web: python ./Verkefni7.py $PORT
+web: python ./Lokaverkefni.py $PORT

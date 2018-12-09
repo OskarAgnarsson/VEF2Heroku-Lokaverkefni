@@ -7,7 +7,7 @@
   	<script>tinymce.init({ selector:'textarea' });</script>
 </head>
 <body>
-	<header>
+	<header class="siteHeader">
 		<div class="siteTitle">
 			<h1>Fréttasíða</h1>
 		</div>
@@ -39,6 +39,9 @@
 						{{!result[2][2]}}<a href="/frett{{result[2][0]}}">...</a>
 					</p>
 				</div>
+			</div>
+			<div>
+				
 			</div>
 		</section>
 		<section class="sidebar">

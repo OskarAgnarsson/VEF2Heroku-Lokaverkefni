@@ -13,10 +13,11 @@
 		<div class="topid"><h4>Rit_ID</h4></div>
 		<div class="topid"><h4>Titill</h4></div>
 	</header>
+	<section class="innskra">
 	%for i in r:
 		<form method="post" action="/breyta">
 			<div class="breyta">
-				<label>
+				<label class="frett_id">
 					{{i[0]}}
 					<input type="radio" name="f" value="{{i[0]}}" required>
 				</label>
@@ -38,6 +39,7 @@
 			<input type="submit" name="breyta" value="Eyða">
 		</form>
 	%end
+	</section>
 
 	<footer>
 		<a href="/">Forsíða</a>

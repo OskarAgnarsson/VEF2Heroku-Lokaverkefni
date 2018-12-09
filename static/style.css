@@ -6,28 +6,50 @@ body {
 	display: grid;
 	max-width: 70em;
 	margin: 0 auto;
+	color: #dbd2a8;
+	background: #364d6d;
 }
-
+.siteHeader{
+	grid-template-columns: 3fr 1fr;
+}
 header{
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	text-align: center;
 	border-bottom: solid black 0.1em;
+	color: #dbd2a8;
+	background-color: #383f77;
 }
 
 
 .main {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	background-color: #434768;
+}
+
+.main a{
+	text-decoration: none;
+	color: #dbd2a8;
+}
+
+.main a:active{
+	color: #968e67;
+}
+
+.main a:visited{
+	color: #968e67;
 }
 
 .content {
 	display: grid;
-	grid-template-rows: 4fr 2fr;
+	grid-template-rows: 2fr 1fr 2fr;
 }
 
 .eftirAdal {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	background-color: #666da5;
+	border-bottom: solid black .05em;
 }
 
 .sidebar{
@@ -38,12 +60,11 @@ header{
 .siteTitle{
 	text-align: center;
 	font-size: 1.2em;
-	background-color: purple;
 }
 
 .skra{
 	padding: .5em;
-	background-color: cyan;
+	background-color: #333968;
 }
 
 .skra li{
@@ -54,24 +75,24 @@ header{
 
 .skra a{
 	text-decoration: none;
+	color: #dbd2a8;
 }
 
 .adalFrett {
 	align-items: center;
 	text-align: center;
-	background-color: blue;
+	background-color: #575c8e;
+	border-bottom: solid black .05em;
 }
 
 .secondary{
 	align-items: center;
 	text-align: center;
-	background-color: green;
 }
 
 .tertiary{
 	align-items: center;
 	text-align: center;
-	background-color: red;
 }
 
 .sidebar div{
@@ -79,9 +100,49 @@ header{
 	text-align: center;
 	border-bottom: solid black .05em;
 	border-top: solid black .05em;
-	background-color: yellow;
+	border-left: solid black .05em;
+	border-right: solid black .05em;
+	background-color: #434768;
 }
 
+.innskra{
+	background-color: #434768;
+}
+
+.innskra h2{
+	margin: 1em;
+}
+
+.innskra form{
+	margin: 1em;
+}
+
+.innskra input[type=text]{
+	width: 25%;
+	margin-left: 2em;
+	margin-right: .5em;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+.innskra input[type=radio]{
+	margin-bottom: 1em;
+}
+
+.innskra input[type=submit]{
+	margin-bottom: 1em;
+}
+
+footer a{
+	text-decoration: none;
+	color: #dbd2a8;
+}
+footer a:visited{
+	color: #968e67;
+}
+footer a:active{
+	color: #968e67;
+}
 .top{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -110,6 +171,16 @@ header{
 	margin-top: 1em;
 	margin-bottom: .5em;
 }
+
+.frett_id{
+	margin-top: .5em;
+	margin-left: 8em;
+}
 .breyta input[type=submit]{
 	margin-bottom: 1em;
+}
+
+.texti{
+	background-color: #434768;
+	padding: 1em;
 }

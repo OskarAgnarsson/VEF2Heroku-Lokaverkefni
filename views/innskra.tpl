@@ -10,7 +10,7 @@
 	<header>
 		<h1>Innskráning</h1>
 	</header>
-	<section>
+	<section class="innskra">
 		<form method="post" action="/doinnskra" accept-charset="ISO-8859-1">
 			<label>
 				Notandanafn:
@@ -23,8 +23,9 @@
 				<br>
 				<input type="text" name="pass">
 			</label>
+			<br>
 			<label>
-				<input type="submit" name="innskra">
+				<input type="submit" name="innskra" value="Innskrá">
 			</label>
 		</form>
 	</section>
