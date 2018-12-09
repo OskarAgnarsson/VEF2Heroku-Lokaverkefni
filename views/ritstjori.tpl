@@ -12,21 +12,20 @@
 	<h2>Ný Frétt</h2>
 
 	<form method="POST" action="/nyfrett" accept-charset="ISO-8859-1">
-		<label>
-			Titill:
-			<br>
-			<input type="text" name="titill" required>
-		</label>
+		Titill:
+		<br>
+		<input type="text" name="titill" required>
 		<br>
 		Texti:
 		<br>
-		<textarea name="frett" required></textarea>
+		<textarea name="frett"></textarea>
 		<br>
 		Höfundur:
 		{{u}}
 		<input type="radio" name="hof" value="{{u}}" required>
 		<br>
-		<input type="submit" name="Submit" value="Submit">
+		<input type="submit" name="submit">
+		
 	</form>
 
 	<h2>Breyta Frétt</h2>
