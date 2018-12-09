@@ -1,3 +1,3 @@
 # VEF2Heroku-Lokaverkefni
 
-#https://oskar-lok.herokuapp.com/
+https://oskar-lok.herokuapp.com/
